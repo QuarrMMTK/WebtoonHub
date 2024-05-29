@@ -3,22 +3,17 @@ package com.mmtk.manga.Service;
 import com.mmtk.manga.Model.Episode;
 import com.mmtk.manga.Repository.EpisodeRepository;
 import com.mmtk.manga.Repository.WebtoonRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-import java.util.Optional;
 
 @Service
 public class EpisodeService {
 
     private final EpisodeRepository episodeRepository;
-    private final WebtoonRepository webtoonRepository;
 
-    public EpisodeService(EpisodeRepository episodeRepository, WebtoonRepository webtoonRepository) {
+    public EpisodeService(EpisodeRepository episodeRepository) {
         this.episodeRepository = episodeRepository;
-        this.webtoonRepository = webtoonRepository;
     }
 
     public Episode addEpisode(Episode episode){
